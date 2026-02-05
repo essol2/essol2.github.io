@@ -5,6 +5,8 @@ interface LandingPageProps {
   onViewApp?: () => void;
 }
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export function LandingPage({ onViewApp }: LandingPageProps) {
   const features = [
     {
@@ -31,7 +33,7 @@ export function LandingPage({ onViewApp }: LandingPageProps) {
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src="/AppIcon.png" alt="Danbi Logo" className="w-9 h-9 rounded-[10px]" />
+            <img src={`${BASE_URL}AppIcon.png`} alt="Danbi Logo" className="w-9 h-9 rounded-[10px]" />
             <span className="text-[20px] text-[#2C3E2E]" style={{ fontFamily: "'MemomentKkukkukk', sans-serif" }}>단비: Danbi</span>
           </div>
 
@@ -108,7 +110,7 @@ export function LandingPage({ onViewApp }: LandingPageProps) {
             {/* Right Content - iPhone Mockup */}
             <div className="relative flex justify-center lg:justify-end">
               <img
-                src="/landing_sample_screen.png"
+                src={`${BASE_URL}landing_sample_screen.png`}
                 alt="Danbi App Screenshot"
                 className="w-[320px] h-auto rounded-[32px] shadow-2xl"
               />
@@ -187,7 +189,7 @@ export function LandingPage({ onViewApp }: LandingPageProps) {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/AppIcon.png" alt="Danbi Logo" className="w-9 h-9 rounded-[10px]" />
+                <img src={`${BASE_URL}AppIcon.png`} alt="Danbi Logo" className="w-9 h-9 rounded-[10px]" />
                 <span className="text-[20px] text-white" style={{ fontFamily: "'MemomentKkukkukk', sans-serif" }}>단비: Danbi</span>
               </div>
               <p className="text-[14px] text-gray-400">
